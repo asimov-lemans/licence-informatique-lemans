@@ -121,6 +121,8 @@ async function handle(conn: Deno.Conn) {
             data,
             headers,
           );
+          
+          headers["access-control-allow-origin"] = "*";
 
           if (cache.addCacheHeader(request, body, routerData, headers)) {
             respondWith(new NotModified304()).catch(console.error);

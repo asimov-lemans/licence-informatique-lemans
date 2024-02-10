@@ -1,7 +1,5 @@
 // menu
 function open_menu() {
-  document.getElementById("izly").children[0].open = this.izly_connected;
-
   this.$refs.menu.showModal();
   this.$dispatch("update-free-room");
 }

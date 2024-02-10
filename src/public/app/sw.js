@@ -11,7 +11,6 @@ addEventListener("install", (event) => {
       "/css/planning-components.css",
       "/js/component.js",
       "/js/index.js",
-      "/js/izly.js",
       "/js/scroll.js",
       "/js/scroll-snap.js",
       "/site.webmanifest",

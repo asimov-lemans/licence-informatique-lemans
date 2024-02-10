@@ -15,5 +15,6 @@
     },
     "deno.suggest.imports.hosts": {
         "https://deno.land": false
-    }
+    },
+    "svg.preview.background": "dark-transparent"
 }
