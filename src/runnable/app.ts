@@ -2,7 +2,6 @@ import { Database, MongoClient } from "../deps.ts";
 import { AppRunner } from "../runner.ts";
 
 interface PlanningConnection {
-  v1: Database;
   v2: Database;
 }
 
@@ -13,8 +12,8 @@ class App extends AppRunner {
     const mongoClient = new MongoClient();
 
     this.planningConnection = {
-      v1: await mongoClient.connect({
-        db: "planning",
+      v2: await mongoClient.connect({
+        db: "planning-v2",
         tls: true,
         servers: this.env.MONGO_DB_HOSTS.split(",").map((host) => ({
           host: host,
@@ -23,11 +22,10 @@ class App extends AppRunner {
         credential: {
           username: this.env.MONGO_DB_USERNAME,
           password: this.env.MONGO_DB_PASSWORD,
-          db: "planning",
+          db: "planning-v2",
           mechanism: "SCRAM-SHA-1",
         },
       }),
-      v2: mongoClient.database("planning-v2"),
     };
   }
 
