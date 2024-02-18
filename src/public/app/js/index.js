@@ -114,7 +114,7 @@ const fetch_planning = async (level, group, start_date, end_date) => {
 
   try {
     const response = await fetch(
-      `https://api.licence-informatique-lemans.tk/v2/planning.json?level=${level}&group=${group}&start=${start_date.toISOString()}&end=${end_date.toISOString()}`,
+      `https://api.asimov-lemans.fr/v2/planning.json?level=${level}&group=${group}&start=${start_date.toISOString()}&end=${end_date.toISOString()}`,
     );
 
     end_loader();

@@ -45,8 +45,8 @@
         let planning_resources_name;
         let planning_resources_type;
         const planning_resources_loaded = (async () => {
-            planning_resources_name = await (await fetch("https://api.licence-informatique-lemans.tk/v2/planning-resources-name.json")).json();
-            planning_resources_type = await (await fetch("https://api.licence-informatique-lemans.tk/v2/planning-resources-type.json")).json();
+            planning_resources_name = await (await fetch("https://api.asimov-lemans.fr/v2/planning-resources-name.json")).json();
+            planning_resources_type = await (await fetch("https://api.asimov-lemans.fr/v2/planning-resources-type.json")).json();
 
             return true;
         })();

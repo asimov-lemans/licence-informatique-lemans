@@ -21,7 +21,7 @@ document.addEventListener("alpine:init", () => {
 
       try {
         const list = await (await fetch(
-          `https://api.licence-informatique-lemans.tk/v2/find-free-room.json`,
+          `https://api.asimov-lemans.fr/v2/find-free-room.json`,
         )).json();
 
         if (!list?.error) this.list = list;
